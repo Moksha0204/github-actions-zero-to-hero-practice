@@ -6,10 +6,10 @@ on:
 jobs:
     
   code:
-      runs-ons: ubuntu-latest
-  steps:
-    - name: Checkout code
-      run: echo :Code Clone from github"
+    runs-ons: ubuntu-latest
+    steps:
+      - name: Checkout code
+        run: echo :Code Clone from github"
     
   build:
     runs-ons: ubuntu-latest
