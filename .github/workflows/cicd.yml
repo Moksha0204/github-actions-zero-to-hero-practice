@@ -9,9 +9,9 @@ on:
         required: true
         type: choice
         options:
-          - dev:
-          - prod:
-          - staging:
+          - dev
+          - prod
+          - staging
 jobs:
   code:
     runs-on: ubuntu-latest
