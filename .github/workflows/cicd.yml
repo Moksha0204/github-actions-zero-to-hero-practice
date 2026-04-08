@@ -1,0 +1,30 @@
+# Name of workflow
+name: CICD
+on:
+# Manual click deliver workflow whenever user needs
+  workflow_dispatch:
+  jobs:
+    
+    code:
+      runs-ons: ubuntu-latest
+      steps:
+        - name: Checkout code
+          run: echo :Code Clone from github"
+    
+    build:
+      runs-ons: ubuntu-latest
+      steps:
+        - name: Builder docker container
+          run: echo "Docker container build"
+    test:
+      runs-ons: ubuntu-latest
+      steps:
+        - name: Test the container
+          run: echo "Testing the container"
+    deploy:
+      runs-ons: ubuntu-latest
+      steps:
+        - name: Deploying the app
+          run: echo "Docker compose deployed the app"
+
+  
