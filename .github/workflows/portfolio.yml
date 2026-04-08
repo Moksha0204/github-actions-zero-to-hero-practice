@@ -3,7 +3,7 @@ name: portfolio
 on:
     push:
         branches: [main]
-        workflow_dispatch:
+        workflowi_dispatch:
 permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
@@ -23,5 +23,7 @@ jobs:
               uses: actions/configure-pages@v4
             - name: Upload static files
               uses: actions/upload-pages-artifact@v4
+              with:
+                path: "."
             - name: Deploy to Github pages
               uses: actions/deploy-pages@v4
