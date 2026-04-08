@@ -11,7 +11,7 @@ jobs:
 # This is name of job
   greet:
 # github runner
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: say hello to users
         run: echo "Hello Dosto"
