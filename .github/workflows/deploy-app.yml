@@ -10,7 +10,7 @@ jobs:
   env:
       DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
 
-    steps:
+  steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
