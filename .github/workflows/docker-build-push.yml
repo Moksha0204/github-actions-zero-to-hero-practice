@@ -1,0 +1,29 @@
+name: Docker Build and Push
+on:
+  push:
+    branches: [main]
+  jobs:
+    build-and-push:
+      runs-on: ubuntu-latest
+
+
+      steps:
+
+        - name: Code Checkout
+          uses: actions/checkout@v4
+        - name: Login to Docker Hub
+          uses: docker/login-action@v3
+          with:
+            username: ${{ vars.DOCKERHUB_USER }}
+            passsword: ${{ secrets.DOCKERHUB_TOKEN }}
+        
+
+        - name: Build abd Push to Docker Hub
+          uses: docker/build-push-action@v6
+          context: .
+          with:
+            push: true
+            tags: 
+              ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github:GITHUB_HEAD_REF }}
+              ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github:GITHUB_HEAD_SHA }
+
