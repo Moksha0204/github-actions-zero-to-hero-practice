@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
           name: github-pages
-          url: ${{steps.deployment.outputs.url}}
+          url: ${{steps.deployment.outputs.page_url}}
 
         steps:
         # Get access to your portfolio code via pre built actions
